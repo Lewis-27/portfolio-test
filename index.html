@@ -5,20 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./output.css">
+    <script src="https://kit.fontawesome.com/72bd3266e5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Header -->
-    <header class="w-full h-[64px] bg-gray-800">
-        <!-- Nav -->
-
+    <header class="w-full h-[64px] flex justify-between items-center px-4 bg-PrimaryBlue text-TextColorWhite shadow-md">
+        <h1 class="text-3xl">Lewis Miller</h1>
+        <!-- Nav Medium and Up -->
+        <nav class="hidden md:flex justify-evenly gap-6">
+            <a href="#">About Me</a>
+            <a href="#">My Projects</a>
+            <a href="#">About This Page</a>
+            <a href="#">Contact</a>
+        </nav>
+        <button class="p-2 rounded-md bg-Orange text-TextColorWhite shadow-sm"> Hire Me</button>
     </header>
+    <!-- Nav Small -->
+    <div id="nav-small" class="hidden flex flex-col md:hidden absolute top-[64px] bg-PrimaryBlue h-[calc(100%-64px)] w-[160px] text-TextColorWhite shadow-md">
+        <i id="collapse-btn" class="relative top-2 left-32 fa-solid fa-chevron-left text-2xl z-10 hover:cursor-pointer"></i>
+        <nav class="flex flex-col justify-evenly flex-grow px-4">
+            <a href="#">About Me</a>
+            <a href="#">My Projects</a>
+            <a href="#">About This Page</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+    <!-- Expand Button -->
+    <div id="expand-btn" class="md:hidden absolute p-2">
+        <i class="fa-solid fa-chevron-right flex text-2xl z-10 w-[48px] h-[48px] hover:cursor-pointer py-2.5 bg-PrimaryBlue text-TextColorWhite rounded-md text-center"></i>
+    </div>
+    <main class="mt-64px">
     <!-- Main -->
         <!-- Hero -->
+        <section class="w-full h-1/2 flex-col-reverse md:flex gap-4 mb-8">
+            <!-- Info -->
+            <div class="container flex flex-col m-auto my-20 p-8  gap-2 w-1/2">
+                <span class="flex gap-1">
+                    <h1 class="text-xl">Hello, I'm</h1>
+                    <h1 class="text-xl text-Orange">Lewis</h1>
+                    <h1 class="text-xl -ml-1">,</h1>
+                </span>
+                <span class="flex flex-col">
+                    <h1 class="text-5xl font-bold text-Orange">Fullstack</h1>
+                    <h1 class="text-5xl font-bold text-Orange">Developer</h1>
+                </span>
+                <span class="flex gap-1">
+                    <h1 class="text-xl">I'm an aspiring Fullstack developer and recent graduate looking for employment</h1>
+                </span>
+                <span class="flex gap-8">
+                    <button class="p-2 rounded-md bg-Orange text-TextColorWhite shadow-sm"> Get in touch</button>
+                    <button class="p-2 rounded-md bg-OffWhite text-TextColor shadow-sm"> Find out more</button>
+                </span>
+            </div>
+            <!-- Picture -->
+            <div class="w-1/2"></div>
+        </section>
+        <!-- Skills -->
+        <section class="w-full bg-SecondaryBlue py-10 px-5">
+            <h1 class="text-3xl text-TextColorWhite text-center mb-5">Skills</h1>
+            <div class="container grid m-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center p-8 gap-y-8 ">
+                <!-- Skill -->
+                <div class="flex flex-col gap-4 w-[200px] h-[200px] justify-center items-center text-5xl bg-white text-TextColor rounded-md
+                hover:bg-Orange hover:text-TextColorWhite transition-all duration-300 shadow-md">
+                    <i class="fa-brands fa-html5"></i>
+                    <h4 class="text-2xl">HTML</h4>
+                </div>
+                <!-- Skill -->
+                <div class="flex flex-col gap-4 w-[200px] h-[200px] justify-center items-center text-5xl bg-white text-TextColor rounded-md
+                hover:bg-Orange hover:text-TextColorWhite transition-all duration-300 shadow-md">
+                    <i class="fa-brands fab fa-css3-alt "></i>
+                    <h4 class="text-2xl">CSS</h4>
+                </div>
+                <!-- Skill -->
+                <div class="flex flex-col gap-4 w-[200px] h-[200px] justify-center items-center text-5xl bg-white text-TextColor rounded-md
+                hover:bg-Orange hover:text-TextColorWhite transition-all duration-300 shadow-md">
+                    <i class="fa-brands fa-js"></i>
+                    <h4 class="text-2xl">JavaScript</h4>
+                </div>
+                <!-- Skill -->
+                <div class="flex flex-col gap-4 w-[200px] h-[200px] justify-center items-center text-5xl bg-white text-TextColor rounded-md
+                hover:bg-Orange hover:text-TextColorWhite transition-all duration-300 shadow-md">
+                    <i class="fa-solid fa-wind"></i>
+                    <h4 class="text-2xl">TailwindCSS</h4>
+                </div>
+                <!-- Skill -->
+                <div class="flex flex-col gap-4 w-[200px] h-[200px] justify-center items-center text-5xl bg-white text-TextColor rounded-md
+                hover:bg-Orange hover:text-TextColorWhite transition-all duration-300 shadow-md">
+                    <i class="fa-brands fa-github"></i>
+                    <h4 class="text-2xl">GitHub</h4>
+                </div>
+            </div>
+        </section>
+        <!-- Evidence -->
         <!-- Employment -->
         <!-- Education -->
-        <!-- Skills -->
         <!-- Contact Info -->
-        <!-- Evidence -->
     <!-- End of Main -->
+    </main>
 </body>
+<script src="main.js"></script>
 </html>
