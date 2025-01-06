@@ -18,7 +18,7 @@
             <a href="#">About This Page</a>
             <a href="#">Contact</a>
         </nav>
-        <button class="p-2 rounded-md bg-Orange text-TextColorWhite shadow-sm"> Hire Me</button>
+        <button class="p-2 rounded-md bg-Orange text-TextColorWhite shadow-sm hover:bg-orange-600"> Get in touch</button>
     </header>
     <!-- Nav Small -->
     <div id="nav-small" class="hidden flex flex-col md:hidden absolute top-[64px] bg-PrimaryBlue h-[calc(100%-64px)] w-[160px] text-TextColorWhite shadow-md">
@@ -32,7 +32,7 @@
     </div>
     <!-- Expand Button -->
     <div id="expand-btn" class="md:hidden absolute p-2">
-        <i class="fa-solid fa-chevron-right flex text-2xl z-10 w-[48px] h-[48px] hover:cursor-pointer py-2.5 bg-PrimaryBlue text-TextColorWhite rounded-md text-center"></i>
+        <i class="fa-solid fa-chevron-right flex text-2xl z-10 w-[48px] h-[48px] hover:cursor-pointer py-2.5 bg-PrimaryBlue text-TextColorWhite rounded-md text-center hover:bg-blue-600"></i>
     </div>
     <main class="mt-64px">
     <!-- Main -->
@@ -53,8 +53,8 @@
                     <h1 class="text-xl">I'm an aspiring Fullstack developer and recent graduate looking for employment</h1>
                 </span>
                 <span class="flex gap-8">
-                    <button class="p-2 rounded-md bg-Orange text-TextColorWhite shadow-sm"> Get in touch</button>
-                    <button class="p-2 rounded-md bg-OffWhite text-TextColor shadow-sm"> Find out more</button>
+                    <button class="p-2 rounded-md bg-Orange text-TextColorWhite shadow-sm hover:bg-orange-600"> Get in touch</button>
+                    <button class="p-2 rounded-md bg-OffWhite text-TextColor shadow-sm hover:bg-gray-300"> Find out more</button>
                 </span>
             </div>
             <!-- Picture -->
@@ -97,11 +97,27 @@
             </div>
         </section>
         <!-- Evidence -->
-        <!-- Employment -->
+        <section class="w-full py-10 px-5">
+            <h1 class="text-3xl text-TextColor text-center mb-5">Projects</h1>
+            <div class="container grid m-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center p-8 gap-y-8 ">
+                <!-- Project -->
+                <div class="flex flex-col gap-4 w-[320px] h-[320px] justify-center items-center text-5xl bg-PrimaryBlue text-TextColorWhite rounded-md
+                hover:bg-Orange hover:text-TextColorWhite transition-all duration-300 shadow-md">
+                    <h4 class="text-2xl">Project 1</h4>
+                </div>
+                <!-- Project -->
+                <div class="flex flex-col gap-4 w-[320px] h-[320px] justify-center items-center text-5xl bg-PrimaryBlue text-TextColorWhite rounded-md
+                hover:bg-Orange hover:text-TextColorWhite transition-all duration-300 shadow-md">
+                    <h4 class="text-2xl">Project 2</h4>
+                </div>
+            </div>
+        </section>
         <!-- Education -->
+        <!-- Employment -->
         <!-- Contact Info -->
     <!-- End of Main -->
     </main>
+    <footer></footer>
 </body>
 <script src="main.js"></script>
 </html>

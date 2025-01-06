@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const icons = require("rocketicons/tailwind");
 module.exports = {
   content: ['./*.html'],
   theme: {
@@ -24,7 +23,6 @@ module.exports = {
     },
   },
   plugins: [
-    icons
   ],
 }
 
