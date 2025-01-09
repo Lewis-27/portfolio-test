@@ -9,31 +9,38 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="w-full fixed h-[64px] flex justify-between items-center px-4 bg-PrimaryBlue text-TextColorWhite shadow-md">
-        <h1 class="text-3xl">Lewis Miller</h1>
+    <header class="w-full fixed top-0 h-[64px] flex justify-between items-center px-4 bg-PrimaryBlue text-TextColorWhite shadow-md">
+        <h1 id="btn-test"  class="text-3xl">Lewis Miller</h1>
         <!-- Nav Medium and Up -->
-        <nav class="hidden md:flex justify-evenly gap-6">
-            <a href="#hero" class="">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">My Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
+        <nav id="nav-bar" class="hidden md:flex justify-evenly gap-3" >
+            <a href="#hero" class="hover:text-Orange">Home</a>
+            <a href="#skills" class="hover:text-Orange">Skills</a>
+            <a href="#projects" class="hover:text-Orange">Projects</a>
+            <a href="#about" class="hover:text-Orange">About This Page</a>
+            <a href="#education" class="hover:text-Orange">Education</a>
+            <a href="#employment" class="hover:text-Orange">Employment</a>
+            <a href="#contact" class="hover:text-Orange">Contact</a>
         </nav>
-        <button class="p-2 rounded-md bg-Orange text-TextColorWhite shadow-sm hover:bg-orange-600"> Get in touch</button>
+        <a href="#contact"> 
+            <button class="p-2 rounded-md bg-Orange text-TextColorWhite shadow-sm hover:bg-orange-600"> Get in touch</button>
+        </a>
     </header>
     <!-- Nav Small -->
-    <div id="nav-small" class="hidden flex flex-col md:hidden absolute top-[64px] bg-PrimaryBlue h-[calc(100%-64px)] w-[160px] text-TextColorWhite shadow-md">
+    <div id="nav-small" class="hidden flex flex-col fixed md:hidden top-[64px] bg-PrimaryBlue h-[calc(100%-64px)] w-[160px] text-TextColorWhite shadow-md">
         <i id="collapse-btn" class="relative top-2 left-32 fa-solid fa-chevron-left text-2xl z-10 hover:cursor-pointer"></i>
         <nav class="flex flex-col justify-evenly flex-grow px-4">
-            <a href="#">About Me</a>
-            <a href="#">My Projects</a>
-            <a href="#">About This Page</a>
-            <a href="#">Contact</a>
+            <a href="#hero" class="hover:text-Orange">Home</a>
+            <a href="#skills" class="hover:text-Orange">Skills</a>
+            <a href="#projects" class="hover:text-Orange">Projects</a>
+            <a href="#about" class="hover:text-Orange">About This Page</a>
+            <a href="#education" class="hover:text-Orange">Education</a>
+            <a href="#employment" class="hover:text-Orange">Employment</a>
+            <a href="#contact" class="hover:text-Orange">Contact</a>
         </nav>
     </div>
     <!-- Expand Button -->
     <div id="expand-btn" class="md:hidden absolute p-2">
-        <i class="fa-solid fa-chevron-right flex text-2xl z-10 w-[48px] h-[48px] hover:cursor-pointer py-2.5 bg-PrimaryBlue text-TextColorWhite rounded-md text-center hover:bg-blue-600"></i>
+        <i class="fa-solid fixed fa-chevron-right flex text-2xl z-10 w-[48px] h-[48px] hover:cursor-pointer py-2.5 bg-PrimaryBlue text-TextColorWhite rounded-md text-center hover:bg-blue-600"></i>
     </div>
     <main class="mt-64px">
     <!-- Main -->
@@ -54,8 +61,12 @@
                     <h1 class="text-xl">I'm an aspiring Fullstack developer and recent graduate looking for employment</h1>
                 </span>
                 <span class="flex gap-8">
-                    <button class="p-2 rounded-md bg-Orange text-TextColorWhite shadow-sm hover:bg-orange-600"> Get in touch</button>
-                    <button class="p-2 rounded-md bg-OffWhite text-TextColor shadow-sm hover:bg-gray-300"> Find out more</button>
+                    <a href="#contact"> 
+                        <button class="p-2 rounded-md bg-Orange text-TextColorWhite shadow-sm hover:bg-orange-600"> Get in touch</button>
+                    </a>
+                    <a href="#skills">
+                        <button class="p-2 rounded-md bg-OffWhite text-TextColor shadow-sm hover:bg-gray-300"> Find out more</button>
+                    </a>
                 </span>
             </div>
             <!-- Picture -->
@@ -63,7 +74,7 @@
         </section>
         <!-- Skills -->
         <div id="skills" class="h-px absolute -mt-[64px]"></div>
-        <section class="w-full bg-SecondaryBlue py-10 px-5">
+        <section id="skills-section" class="w-full bg-SecondaryBlue py-10 px-5">
             <h1 class="text-3xl text-TextColorWhite text-center mb-5">Skills</h1>
             <div class="container grid m-auto grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center gap-x-8 p-8 gap-y-8 ">
                 <!-- Skill -->
@@ -100,7 +111,7 @@
         </section>
         <!-- Evidence -->
         <div id="projects" class="h-px absolute -mt-[64px]"></div>
-        <section class="w-full py-10 px-5">
+        <section id="projects-section" class="w-full py-10 px-5">
             <h1 class="text-3xl text-TextColor text-center mb-5">Projects</h1>
             <div class="container grid m-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center p-8 gap-y-8 ">
                 <!-- Project -->
@@ -115,84 +126,115 @@
                 </div>
             </div>
         </section>
+
         <!-- About This Page -->
-        
+        <div id="about" class="h-px absolute -mt-[64px]"></div>
+        <section id="about-section" class="w-full py-10 px-5 bg-SecondaryBlue text-TextColorWhite">
+            <h1 class="text-3xl  text-center  mb-5">About This Page</h1>
+            <div class="flex flex-col items-center justify-between w-full space-y-8 shadow-md">
+                <!-- Text -->
+                <div class="text-center w-full bg-white text-TextColor rounded-md flex flex-col p-8 space-y-4">
+                </div>
+            </div>
+        </section>
+
         <!-- Education -->
         <div id="education" class="h-px absolute -mt-[64px]"></div>
-        <section class="w-full py-10 px-5 bg-SecondaryBlue text-TextColorWhite">
+        <section id="education-section" class="w-full py-10 px-5  text-TextColor">
             <h1 class="text-3xl  text-center  mb-5">Education</h1>
             <div class="flex flex-col items-center justify-between w-full space-y-8">
                 <!-- University -->
-                <div class="text-center w-full bg-white text-TextColor rounded-md flex flex-col p-8 space space-y-4">
+                <div class="text-center w-full bg-PrimaryBlue text-TextColorWhite rounded-md flex flex-col p-8 space space-y-4 shadow-md">
                     <div class="flex justify-between items-center">
                         <h4 class="text-2xl font-bold text-left">Aston University, Birmingham</h4>
-                        <h5 class="text-md text-TextColorLight">(September 2018 - May 2021)</h5>
+                        <h5 class="text-md text-blue-200">(September 2018 - May 2021)</h5>
                     </div>
-                    <p class="text-xl text-TextColor text-left">BEng (Hons) Electronic Engineering and Computer Science (1st) with award 
+                    <p class="text-xl  text-left">BEng (Hons) Electronic Engineering and Computer Science (1st) with award 
                         for best final year project
                         </p>
                 </div>
 
                 <!-- Sixth Form -->
-                <div class="text-center w-full bg-white text-TextColor rounded-md flex flex-col p-8 space space-y-4">
+                <div class="text-center w-full bg-PrimaryBlue text-TextColorWhite rounded-md flex flex-col p-8 space space-y-4 shadow-md">
                     <div class="flex justify-between items-center">
                         <div class="flex-flex-col gap-1">
 
                             <h4 class="text-2xl font-bold text-left">Tudor Grange Academy Solihull</h4>
                             <h4 class="text-2xl font-bold text-left">(Sixth Form)</h4>
                         </div>
-                        <h5 class="text-md text-TextColorLight">(September 2016 - June 2018)</h5>
+                        <h5 class="text-md text-blue-200">(September 2016 - June 2018)</h5>
                     </div>
-                    <p class="text-xl text-TextColor text-left">A-levels: History (A), Maths(B), Physics(B)
+                    <p class="text-xl text-TextColorWhite text-left">A-levels: History (A), Maths(B), Physics(B)
                         </p>
                 </div>
             </div>
         </section>
         <!-- Employment -->
         <div id="employment" class="h-px absolute -mt-[64px]"></div>
-        <section class="w-full py-10 px-5 text-TextColor">
-            <h1 class="text-3xl text-TextColor text-center mb-5">Employment</h1>
+        <section id="employment-section" class="w-full py-10 px-5 bg-SecondaryBlue text-TextColorWhite">
+            <h1 class="text-3xl text-TextColorWhite text-center mb-5">Employment</h1>
             <div class="flex flex-col items-center justify-between w-full space-y-8">
                 <!-- Job -->
-                <div class="text-center w-full bg-PrimaryBlue text-TextColorWhite rounded-md flex flex-col p-8 space space-y-4">
+                <div class="text-center w-full bg-white text-TextColor rounded-md flex flex-col p-8 space space-y-4 shadow-md">
                     <div class="flex justify-between items-center">
                         <h4 class="text-2xl font-bold text-left">Sales Assistant</h4>
-                        <h5 class="text-md text-blue-200">(July 2021 - present)</h5>
+                        <h5 class="text-md text-TextColorLight">(July 2021 - present)</h5>
                     </div>
-                    <p class="text-xl text-TextColorWhite text-left">HMV Solihull
+                    <p class="text-xl text-TextColor text-left">HMV Solihull
                         </p>
                 </div>
             </div>
         </section>
         <!-- Contact Info -->
         <div id="contact" class="h-px absolute -mt-[64px]"></div>
-        <section class="w-full py-10 px-5 bg-SecondaryBlue text-TextColorWhite">
+        <section id="contact-section" class="w-full py-10 px-5  text-TextColor">
             <h1 class="text-3xl  text-center  mb-5">Contact Details</h1>
             <div class="flex flex-col items-center justify-between w-full space-y-8">
-                <!-- University -->
-                <div class="text-center w-full bg-white text-TextColor rounded-md flex flex-col p-8 space-y-4">
+                <!-- Details -->
+                <div class="text-center w-full bg-PrimaryBlue text-TextColorWhite rounded-md flex flex-col p-8 space-y-4 shadow-md">
                     <!-- Email -->
                     <div class="flex justify-center items-center gap-4">
                         <h4 class="text-2xl text-left">Email:</h4>
-                        <h5 class="text-2xl font-bold  text-TextColor">lewis.270500@gmail.com</h5>
+                        <h5 class="text-2xl font-bold  text-TextColorWhite">lewis.270500@gmail.com</h5>
                     </div>
                     <!-- LinkedIn -->
                     <div class="flex justify-center items-center gap-4">
                         <h4 class="text-2xl text-left">LinkedIn:</h4>
-                        <a href="linkedin.com/in/lewis-miller-a788a9331/" class="text-2xl font-bold hover:underline text-TextColor">linkedin.com/in/lewis-miller-a788a9331/</a>
+                        <a href="linkedin.com/in/lewis-miller-a788a9331/" class="text-2xl font-bold hover:underline text-TextColorWhite">linkedin.com/in/lewis-miller-a788a9331/</a>
                     </div>
                     <!-- Mobile Number -->
                     <div class="flex justify-center items-center gap-4">
                         <h4 class="text-2xl text-left">Tel:</h4>
-                        <h5 class="text-2xl font-bold  text-TextColor">07707057369</h5>
+                        <h5 class="text-2xl font-bold  text-TextColorWhite">07707057369</h5>
                     </div>
                 </div>
             </div>
         </section>
     <!-- End of Main -->
     </main>
-    <footer>
-
+    <footer class="w-full py-10 px-5 bg-SecondaryBlue text-TextColorWhite text-center">
+        <div class="container m-auto flex justify-evenly items-center">
+            <div class="flex flex-col">
+                <!-- Logo -->
+                <h1 class="text-4xl font-bold">Lewis Miller</h1>
+                <!-- Copyright -->
+                <h4 class="text-md">Copyright 2025</h4>
+            </div>
+            <!-- Navigation -->
+            <div class="flex gap-8 text-left">
+                <div class="flex flex-col gap-2">
+                    <a href="#hero" class="text-xl hover:text-Orange">Home</a>
+                    <a href="#skills" class="text-xl hover:text-Orange">Skills</a>
+                    <a href="#projects" class="text-xl hover:text-Orange">Projects</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <a href="#about" class="text-xl hover:text-Orange">About This Page</a>
+                    <a href="#education" class="text-xl hover:text-Orange">Education</a>
+                    <a href="#contact" class="text-xl hover:text-Orange">Contact</a>
+                </div>
+            </div>
+            <!-- Contact Button -->
+        </div>
     </footer>
 </body>
 <script src="main.js"></script>
